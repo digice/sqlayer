@@ -1,8 +1,5 @@
-{
-  "phputs" : {
-    "package": "phputs",
-    "version": "*",
-    "link": "https://github.com/digices-llc/phputs.git",
-    "description": "PHP Utilities"
-  }
-}
+[{
+	"package": "phputs",
+	"version": "*",
+	"link": "https:\/\/github.com\/digices-llc\/phputs.git"
+}]
