@@ -26,4 +26,19 @@ abstract class SQLayerTbl
     }
   }
 
+  public function insertArrays($arrays)
+  {
+    $sql = 'INSERT INTO `'.$this->name.'` VALUES (NULL';
+    for ($i = 0 ; $i < count($arrays) ; $i++) {
+      $sql .= ',?';
+    }
+    $sql .= ');';
+    $this->dbo->insert($sql,$arrays);
+  }
+
+  public function insertArray($values)
+  {
+    $this->insertArrays(array($values));
+  }
+
 }

@@ -10,6 +10,11 @@ abstract class SQLayerDbo
     $this->pdo = new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST,DB_USER,DB_PASS);
   }
 
+  public function insertId()
+  {
+    return $this->pdo->lastInsertId();
+  }
+
   public function executeSQL($sql)
   {
     if ($affectedRows = $this->pdo->exec($sql)) {
@@ -28,6 +33,14 @@ abstract class SQLayerDbo
       }
     }
     return $rows;
+  }
+
+  public function insert($sql,$arrays)
+  {
+    $stmt = $this->pdo->prepare($sql);
+    foreach ($arrays as $array) {
+      $stmt->execute($array);
+    }
   }
 
 }
