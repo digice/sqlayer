@@ -1,5 +1,5 @@
 # sqlayer
-MySQL Database Wrapper for OTMVC Projects
+*MySQL Database Wrapper for OTMVC Projects*
 
 To create a database connection object, extend SQLayerDbo:
 
@@ -38,7 +38,7 @@ $dbo = TestDbo::sharedInstance();
 You then have access to the following API methods:
 
 ### Execute SQL ###
-*Pass in SQL string to execute with no result. Returns 1 on success, 0 on failure
+*Pass in SQL string to execute with no result. Returns 1 on success, 0 on failure*
 ```php
 $int = $dbo->executeSQL($sql);
 ```
