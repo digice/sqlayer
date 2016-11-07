@@ -1,19 +1,27 @@
 <?php
 
+/**
+ * @package SQLayer
+ * @version 0.0.3
+ * @date    2016-11-08
+ * @author  Roderic Linguri <linguri@digices.com>
+ * @license MIT
+ */
+
 abstract class SQLayerTbl
 {
 
-  /** @property SQLayerDbo **/
+  /** @property *obj* SQLayerDbo **/
   protected $dbo;
 
-  /** @property string **/
+  /** @property *str* table name **/
   protected $name;
 
-  /** @property int **/
+  /** @property *int* number of rows **/
   protected $returnedCount;
 
   /**
-   * @return mixed
+   * @return *int*
    */
   public function returnedCount()
   {
@@ -32,8 +40,8 @@ abstract class SQLayerTbl
   }
 
   /**
-   * @param $id
-   * @return array
+   * @param  *int*
+   * @return *mixed*
    */
   public function fetchRowFromId($id)
   {
@@ -47,7 +55,7 @@ abstract class SQLayerTbl
   }
 
   /**
-   * @param mixed $arrays
+   * @param *mixed*
    */
   public function insertArrays($arrays)
   {
@@ -60,7 +68,7 @@ abstract class SQLayerTbl
   }
 
   /**
-   * @param mixed $values
+   * @param *mixed*
    */
   public function insertArray($values)
   {
