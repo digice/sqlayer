@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * @package SQLayer
+ * @version 0.0.3
+ * @date    2016-11-08
+ * @author  Roderic Linguri <linguri@digices.com>
+ * @license MIT
+ */
+
+/** Test Suite **/
+
 require_once(dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php');
 
 // set up test classes as singletons
