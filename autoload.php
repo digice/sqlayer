@@ -1,16 +1,28 @@
 <?php
 
-/** Import Configuration **/
+/**
+ * @package SQLayer
+ * @version 0.0.3
+ * @date    2016-11-08
+ * @author  Roderic Linguri <linguri@digices.com>
+ * @license MIT
+ */
+
+/** Autoloader **/
+
+// import configuration
 require_once(__DIR__.DIRECTORY_SEPARATOR.'etc'.DIRECTORY_SEPARATOR.'config.php');
 
-/** Load Vendor libraries **/
-require_once(__DIR__.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php');
+// path to lib directory
+$lib = __DIR__.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR;
 
-/** Load Library Classes **/
-$di = new DirectoryIterator(__DIR__.DIRECTORY_SEPARATOR.'lib');
+// create iterator
+$di = new DirectoryIterator($lib);
+
+// require each file in lib directory
 foreach ($di as $item) {
   $file = $item->getFilename();
-  if (substr($file, 0, 1) != '.') {
-    require_once(__DIR__.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.$file);
+  if (substr($file,0,1) != '.') {
+    require_once($lib.$file);
   }
 }
