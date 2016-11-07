@@ -1,21 +1,29 @@
 <?php
 
+/**
+ * @package SQLayer
+ * @version 0.0.3
+ * @date    2016-11-08
+ * @author  Roderic Linguri <linguri@digices.com>
+ * @license MIT
+ */
+
 abstract class SQLayerDbo
 {
 
-  /** @property PDO **/
+  /** @property *obj* PDO Connection **/
   protected $pdo;
 
-  /** @property hostname or ip address **/
+  /** @property *str* hostname or ip address **/
   protected $host;
   
-  /** @property db name **/
+  /** @property *str* db name **/
   protected $name;
   
-  /** @property mysql username **/
+  /** @property *str* mysql username **/
   protected $user;
   
-  /** @property password **/
+  /** @property *str* password **/
   protected $pass;
   
   /**
@@ -27,7 +35,7 @@ abstract class SQLayerDbo
   }
 
   /**
-   * @return int
+   * @return *int*
    */
   public function insertId()
   {
@@ -35,8 +43,8 @@ abstract class SQLayerDbo
   }
 
   /**
-   * @param string $sql
-   * @return int
+   * @param *str* $sql
+   * @return *int*
    */
   public function executeSQL($sql)
   {
@@ -48,8 +56,8 @@ abstract class SQLayerDbo
   }
 
   /**
-   * @param  string $sql
-   * @return mixed
+   * @param  *str* $sql
+   * @return *mixed*
    */
   public function fetchRows($sql)
   {
