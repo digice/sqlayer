@@ -22,7 +22,7 @@ class TestDbo extends SQLayerDbo
     $this->host = '127.0.0.1';
     $this->name = 'test';
     $this->user = 'test';
-    $this->host = 'secret';
+    $this->pass = 'secret';
     parent::__construct();
   }
 
