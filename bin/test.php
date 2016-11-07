@@ -19,8 +19,8 @@ class TestDbo extends SQLayerDbo
   public function __construct()
   {
     $this->host = '127.0.0.1';
-    $this->name = 'test_db';
-    $this->user = 'test_db';
+    $this->name = 'test';
+    $this->user = 'test';
     $this->host = 'secret';
     parent::__construct();
   }
