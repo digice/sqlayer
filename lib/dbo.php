@@ -6,12 +6,24 @@ abstract class SQLayerDbo
   /** @property PDO **/
   protected $pdo;
 
+  /** @property hostname or ip address **/
+  protected $host;
+  
+  /** @property db name **/
+  protected $name;
+  
+  /** @property mysql username **/
+  protected $user;
+  
+  /** @property password **/
+  protected $pass;
+  
   /**
    * SQLayerDbo constructor
    */
   public function __construct()
   {
-    $this->pdo = new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST,DB_USER,DB_PASS);
+    $this->pdo = new PDO('mysql:dbname='.$this->name.';host='.$this->host,$this->user,$this->pass);
   }
 
   /**
