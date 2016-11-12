@@ -40,6 +40,16 @@ abstract class SQLayerTbl
   }
 
   /**
+  * @return *mixed*
+  */
+  public function allRows()
+  {
+    $sql = 'SELECT * FROM `'.$this->name.'` ;';
+    return $this->fetchRows($sql);
+  }
+
+
+  /**
    * @param  *int*
    * @return *mixed*
    */
