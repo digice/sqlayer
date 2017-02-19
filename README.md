@@ -1,4 +1,4 @@
-# sqlayer
+# SQLayer #
 *MySQL Database Wrapper for OTMVC Projects*
 
 ## SQLayerDbo ##
