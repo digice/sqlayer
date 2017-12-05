@@ -2,7 +2,7 @@
 
 /**
  * @package SQLayer
- * @version 0.0.3
+ * @version 0.0.4
  * @date    2016-11-08
  * @author  Roderic Linguri <linguri@digices.com>
  * @license MIT
@@ -47,7 +47,6 @@ abstract class SQLayerTbl
     $sql = 'SELECT * FROM `'.$this->name.'` ;';
     return $this->fetchRows($sql);
   }
-
 
   /**
    * @param  *int*
