@@ -2,7 +2,7 @@
 
 /**
  * @package SQLayer
- * @version 0.0.3
+ * @version 0.0.4
  * @date    2016-11-08
  * @author  Roderic Linguri <linguri@digices.com>
  * @license MIT
