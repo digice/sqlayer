@@ -2,7 +2,7 @@
 
 /**
  * @package SQLayer
- * @version 0.0.3
+ * @version 0.0.4
  * @date    2016-11-08
  * @author  Roderic Linguri <linguri@digices.com>
  * @license MIT
@@ -14,7 +14,7 @@
 require_once(__DIR__.DIRECTORY_SEPARATOR.'etc'.DIRECTORY_SEPARATOR.'config.php');
 
 // path to lib directory
-$lib = __DIR__.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR;
+$lib = __DIR__.DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR;
 
 // create iterator
 $di = new DirectoryIterator($lib);
